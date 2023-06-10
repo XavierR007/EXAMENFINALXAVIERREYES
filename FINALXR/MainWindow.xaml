@@ -1,0 +1,36 @@
+﻿<Window x:Class="FINALXR.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FINALXR"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="SkyBlue" VerticalAlignment="Center" HorizontalAlignment="Center" Height="450">
+        <Grid Margin="0,0,0,369">
+            <TextBox Height="25" Width="150" Background="Orange" x:Name="T0" Foreground="Green" Margin="165,8,485,8"/>
+            <TextBox Height="25" Width="150" Background="Orange" x:Name="T1" Foreground="Green" Margin="10,8,640,8"/>
+            <TextBox Height="25" Width="150" Background="Orange" x:Name="T2" Foreground="Green" Margin="329,8,321,8"/>
+            <TextBox Height="25" Width="150" Background="Orange" x:Name="T3" Foreground="Green" Margin="491,8,159,8"/>
+        </Grid>
+
+
+        <DataGrid x:Name="DTG1" Margin="10,68,185,70" SelectionChanged="DTG1_SelectionChanged">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="100" Header="Carnet" Binding="{Binding Car}"/>
+                <DataGridTextColumn Width="100" Header="Nombre" Binding="{Binding Nom}"/>
+                <DataGridTextColumn Width="100" Header="Telefono" Binding="{Binding Tel}"/>
+                <DataGridTextColumn Width="100" Header="Grado" Binding="{Binding Gra}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Background="Orange" x:Name="BG" Content="Guardar" Margin="620,65,23,353" Click="BG_Click" />
+        <Button Background="Orange" x:Name="BL" Content="Limpiar" Margin="620,117,23,301" Click="BL_Click" />
+        <Button Background="Orange" x:Name="BS" Content="Salir" Margin="620,348,23,70" Click="BS_Click" />
+        <Label Foreground="Black" x:Name="Carnet" Content="Carnet" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,0,0,0" Width="150"/>
+        <Label Foreground="Black" x:Name="Nombre" Content="Nombre" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="165,0,0,0" Width="147"/>
+        <Label Foreground="Black" x:Name="Telefono" Content="Telefono" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="331,0,0,0" Width="148"/>
+        <Label Foreground="Black" x:Name="Grado" Content="Grado (1-6)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="494,0,0,0" Width="150"/>
+
+    </Grid>
+</Window>
